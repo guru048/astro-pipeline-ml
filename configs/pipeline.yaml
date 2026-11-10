@@ -1,0 +1,39 @@
+catalogue:
+  n_sources: 1_000_000
+  seed: 42
+  field_size_deg: 10.0
+
+quality_cuts:
+  snr_min: 5.0
+  snr_max: 5000.0
+  fwhm_min: 0.5
+  fwhm_max: 8.0
+  ellipticity_max: 0.95
+  flux_radius_min: 0.3
+  flux_radius_max: 60.0
+  mag_err_max: 0.3
+  background_max: 1500.0
+
+cross_match:
+  radius_arcsec: 1.0
+  n_workers: 4
+
+training:
+  hidden_dim: 128
+  embed_dim: 64
+  n_layers: 3
+  dropout: 0.2
+  lr: 0.001
+  weight_decay: 0.0001
+  batch_size: 512
+  max_epochs: 200
+  patience: 20
+  margin: 1.0
+  alpha: 0.4
+  n_folds: 5
+  seed: 42
+  n_classes: 4
+
+tuning:
+  n_trials: 50
+  n_folds: 3
